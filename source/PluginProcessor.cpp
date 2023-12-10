@@ -1,5 +1,4 @@
 #include "PluginProcessor.h"
-#include "PluginEditor.h"
 
 //==============================================================================
 PluginProcessor::PluginProcessor()
@@ -154,12 +153,12 @@ void PluginProcessor::processBlock (juce::AudioBuffer<float>& buffer,
 //==============================================================================
 bool PluginProcessor::hasEditor() const
 {
-    return true; // (change this to false if you choose to not supply an editor)
+    return false;
 }
 
 juce::AudioProcessorEditor* PluginProcessor::createEditor()
 {
-    return new PluginEditor (*this);
+    return nullptr;
 }
 
 //==============================================================================
