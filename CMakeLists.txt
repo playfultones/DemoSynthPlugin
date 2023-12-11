@@ -63,6 +63,10 @@ juce_add_plugin("${PROJECT_NAME}"
     # First character MUST be uppercase for AU formats
     PLUGIN_MANUFACTURER_CODE PlTo
 
+    IS_SYNTH TRUE
+    NEEDS_MIDI_INPUT TRUE
+    NEEDS_MIDI_OUTPUT FALSE
+
     # Change me!
     # A unique four-character plugin id
     # Note: this must have at least one upper-case character
