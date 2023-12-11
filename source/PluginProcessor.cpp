@@ -12,6 +12,7 @@ PluginProcessor::PluginProcessor()
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
                        )
+, unitySynth(keyboardState)
 {
     for (int i = 0; i < numVoices; ++i)
         synth.addVoice(new SineWaveVoice());
@@ -93,6 +94,7 @@ void PluginProcessor::changeProgramName (int index, const juce::String& newName)
 void PluginProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     juce::ignoreUnused(samplesPerBlock);
+    unitySynth.initialize();
     synth.setCurrentPlaybackSampleRate(sampleRate);
 }
 

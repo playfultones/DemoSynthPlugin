@@ -5,3 +5,6 @@
 	path = cmake
 	url = https://github.com/sudara/cmake-includes.git
 	branch = main
+[submodule "modules/playfultones_unitysynth"]
+	path = modules/playfultones_unitysynth
+	url = https://github.com/playfultones/playfultones_unitysynth.git

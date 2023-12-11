@@ -1,6 +1,7 @@
 #pragma once
 
 #include <juce_audio_processors/juce_audio_processors.h>
+#include <playfultones_unitysynth/playfultones_unitysynth.h>
 
 #if (MSVC)
 #include "ipps.h"
@@ -42,6 +43,7 @@ public:
 
 private:
     juce::Synthesiser synth;
+    playfultones::UnitySynth unitySynth;
 
     class SynthSound : public juce::SynthesiserSound
     {

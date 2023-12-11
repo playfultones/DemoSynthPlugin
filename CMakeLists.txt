@@ -46,7 +46,7 @@ include(JUCEDefaults)
 add_subdirectory(JUCE)
 
 # Add any other modules you want modules here, before the juce_add_plugin call
-# juce_add_module(modules/my_module)
+juce_add_module(modules/playfultones_unitysynth)
 
 # See `docs/CMake API.md` in the JUCE repo for all config options
 juce_add_plugin("${PROJECT_NAME}"
@@ -125,6 +125,7 @@ target_compile_definitions(SharedCode
 # This allows the JUCE plugin targets and the Tests target to link against it
 target_link_libraries(SharedCode
     INTERFACE
+    playfultones_unitysynth
     juce_audio_utils
     juce_audio_processors
     juce_dsp
